@@ -2,21 +2,25 @@
   "name": "todo",
   "version": "1.0.0",
   "description": "todo on clear JS",
-  "main": "js/script.js",
+  "main": "js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "js",
     "clearJS",
-    "vanillaJS"
+    "vanillaJS",
+    "ES6",
+    "JavaScript",
+    "LocalStorage"
   ],
   "author": "shalser",
   "license": "ISC",
   "dependencies": {
+    "del": "^3.0.0",
     "gulp": "^4.0.2",
-    "save-dev": "0.0.1-security",
-    "del": "^3.0.0"
+    "http-server": "^0.12.3",
+    "save-dev": "0.0.1-security"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",

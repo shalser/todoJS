@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.logoWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  transition: .3s;
+  &:hover {
+    transition: .3s;
+    -webkit-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+    box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+  }
+  @media (max-width: 320px) {
+    width: 310px;
+  }
+  img {
+    width: 100px;
+  }
+}
+
+.todoMainTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 35px;
+    transition: .3s;
+    &:hover {
+      transition: .3s;
+      text-shadow: 0 0 5px #000000;
+    }
+  }
+}
+
+
+
+.wrapAddTodo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .inputText {
+    display: flex;
+  }
+  .buttonAdd {
+    width: 65px;
+    transition: .3s;
+    &:hover {
+      transition: .3s;
+      -webkit-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+      -moz-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+      box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+    }
+  }
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  min-height: 600px;
+  .item {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    @media (min-width: 321px) and (max-width: 350px) {
+      max-width: 290px;
+    }
+    @media (max-width: 320px) {
+      max-width: 280px;
+    }
+    .checkBlock {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (min-width: 321px) and (max-width: 350px) {
+        max-width: 139px;
+      }
+      .todoBlock {
+        width: 100%;
+        max-width: 470px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 5px;
+        //@media (max-width: 668px) {
+        //  max-width: 300px;
+        //}
+        //@media (max-width: 500px) {
+        //  max-width: 200px;
+        //}
+        @media (max-width: 373px) {
+          max-width: 221px;
+        }
+        @media (max-width: 320px) {
+          max-width: 152px;
+        }
+        .textTodo {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .nameTodo {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .buttonsBlock {
+    width: 100%;
+    max-width: 110px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .delete {
+      padding: 0 3px 0 3px;
+      transition: .3s;
+      &:hover {
+        transition: .3s;
+        -webkit-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+        -moz-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+        box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+      }
+    }
+    .done {
+      padding: 0 3px 0 3px;
+      transition: .3s;
+      &:hover {
+        transition: .3s;
+        -webkit-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+        -moz-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+        box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+      }
+    }
+    .edit {
+      padding: 0 3px 0 3px;
+      transition: .3s;
+      &:hover {
+        transition: .3s;
+        -webkit-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+        -moz-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+        box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+      }
+    }
+  }
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  top: 30px;
+}
+.checked {
+  text-decoration: line-through;
+}
+label {
+  display: contents;
+}
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  transition: opacity 400ms ease-in;
+  display: none;
+  pointer-events: none;
+}
+
+
+//todo  Modal
+
+
+.modal {
+  display: none;
+  width: 100%;
+  max-width: 350px;
+  //display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 320px;
+  left: 750px;
+  background: #ffffff;
+  .wrapModal {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 33px 12px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: 0 0 33px 12px rgba(0, 0, 0, 0.27);
+    box-shadow: 0 0 33px 12px rgba(0, 0, 0, 0.27);
+    .modalForm {
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .formTitle {
+        font-size: 21px;
+        font-weight: 500;
+      }
+      .wrapFormInput {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .formButton {
+          padding: 0 3px 0 3px;
+          transition: .3s;
+          &:hover {
+            transition: .3s;
+            -webkit-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+            -moz-box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+            box-shadow: 0 0 33px -1px rgba(0, 0, 0, 0.27);
+          }
+        }
+      }
+      .formClose {
+        position: relative;
+        top: -50px;
+        left: 164px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 35px;
+  @media (max-width: 1919px) {
+    top: -20px;
+  }
+  .footerLogo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footerText {
+      font-weight: 500;
+      margin-right: 5px;
+    }
+    .footerImg {
+      width: 30px;
+    }
+  }
+  .copyrights {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hiddenBlock {
+  display: none;
+}
+
+
+
+
+
+
+

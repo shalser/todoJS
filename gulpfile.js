@@ -10,7 +10,7 @@ const sass = require('gulp-sass')
 
 //Порядок подключения css файлов
 const cssFiles = [
-    './css/style.scss',
+    './scss/style.scss',
 ]
 
 //Таск на стили CSS
@@ -40,7 +40,7 @@ function styles() {
 //Просматривать файлы
 function watch() {
     //Следить за CSS файлами
-    gulp.watch('./css/**/*.scss', styles)
+    gulp.watch('./scss/**/*.scss', styles)
 }
 
 //Таск вызывающий функцию styles
