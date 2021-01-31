@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+    <title>JS Todo</title>
+</head>
+
+<body>
+
+<div class="logoWrap">
+    <a href="index.html"><img src="img/todo.gif" alt="logo"></a>
+</div>
+
+<div class="todoMainTitle">
+    <h2>Todo</h2>
+</div>
+
+
+<div class="wrapAddTodo">
+    <label for="textTodo">
+        <input type="text" class="inputText" id="textTodo">
+    </label>
+    <button class="buttonAdd">Add</button>
+</div>
+<div class="wrap"></div>
+<div class="error"></div>
+
+
+<div class="modal">
+    <div class="wrapModal">
+        <form class="modalForm">
+            <div class="formTitle">Edit todo</div>
+
+            <div class="wrapFormInput">
+                <label for="formInput">
+                    <input type="text" id="formInput">
+                </label>
+                <button type="button" class="formButton">Ok</button>
+            </div>
+
+            <div class="formClose">X</div>
+            <div class="hiddenBlock"></div>
+        </form>
+    </div>
+</div>
+<div class="footer">
+    <div class="footerLogo">
+        <div class="footerText">design by shalser</div>
+        <a href="http://www.shalser.ru" target="_blank">
+            <img class="footerImg" src="img/favicon.png" alt="footerLogo">
+        </a>
+    </div>
+    <div class="copyrights">&copy;2021 by shalser</div>
+</div>
+
+
+
+
+
+
+
+<script src="js/main.js"></script>
+</body>
+
+</html>

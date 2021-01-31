@@ -5,10 +5,12 @@ let Error = document.querySelector('.error')
 
 let newTodo = []
 
+
 if (localStorage.getItem('todo')) {
     newTodo = JSON.parse(localStorage.getItem('todo'))
     addTodos()
 }
+
 
 buttonAdd.addEventListener('click', function () {
     let text = textAdd.value
@@ -28,6 +30,7 @@ buttonAdd.addEventListener('click', function () {
         Error.innerHTML = 'Напишите что-нибудь!'
     }
 })
+
 
 function addTodos() {
     let displayMessage = ''
@@ -82,6 +85,7 @@ function deleteTodo(id) {
     addTodos()
 }
 
+
 //todo--------------------------EDIT TODO--------------------------------------------
 
 
@@ -129,6 +133,7 @@ let close = document.querySelector('.formClose')
 close.addEventListener('click', () => {
     document.querySelector('.modal').style.display = 'none'
 })
+
 
 
 
