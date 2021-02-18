@@ -209,14 +209,11 @@ label {
 .modal {
   display: none;
   width: 100%;
-  max-width: 350px;
-  //display: flex;
+  height: 100%;
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 320px;
-  left: 750px;
-  background: #ffffff;
   .wrapModal {
     width: 100%;
     max-width: 350px;
@@ -265,6 +262,10 @@ label {
     }
   }
 }
+
+
+
+
 
 .footer {
   width: 100%;

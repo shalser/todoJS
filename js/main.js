@@ -109,9 +109,9 @@ Wrap.addEventListener('click', (event) => {
 })
 
 
-let formButton = document.querySelector('.formButton').addEventListener(
+document.querySelector('.formButton').addEventListener(
     'click',
-    (event) => {
+    () => {
         let formInput = document.querySelector('#formInput')
         let formInputValue = formInput.value
 
