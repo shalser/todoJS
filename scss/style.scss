@@ -225,6 +225,13 @@ label {
     -webkit-box-shadow: 0 0 33px 12px rgba(0, 0, 0, 0.27);
     -moz-box-shadow: 0 0 33px 12px rgba(0, 0, 0, 0.27);
     box-shadow: 0 0 33px 12px rgba(0, 0, 0, 0.27);
+    background: #ffffff;
+    @media (max-width: 360px) {
+      width: 90%;
+    }
+    @media (max-width: 359px) {
+      width: 80%;
+    }
     .modalForm {
       width: 100%;
       max-width: 300px;
@@ -232,6 +239,12 @@ label {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      @media (max-width: 360px) {
+        width: 90%;
+      }
+      @media (max-width: 359px) {
+        width: 80%;
+      }
       .formTitle {
         font-size: 21px;
         font-weight: 500;
@@ -255,9 +268,33 @@ label {
       }
       .formClose {
         position: relative;
-        top: -50px;
+        top: -43px;
         left: 164px;
         cursor: pointer;
+        @media (max-width: 360px) {
+          left: 150px;
+        }
+        @media (max-width: 359px) {
+          left: 132px;
+        }
+        @media (max-width: 349px) {
+          left: 127px;
+        }
+        @media (max-width: 340px) {
+          left: 127px;
+        }
+        @media (max-width: 335px) {
+          left: 123px;
+        }
+        @media (max-width: 329px) {
+          left: 123px;
+        }
+        @media (max-width: 321px) {
+          left: 117px;
+        }
+        @media (max-width: 320px) {
+          left: 117px;
+        }
       }
     }
   }
